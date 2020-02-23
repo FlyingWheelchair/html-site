@@ -13,3 +13,45 @@ function OfferPriceRQ(data) {
 
 	});
 }
+
+var search_results="";
+
+var flight_offers_rated = [
+	{ departure_time: "9am", arrival_time: "11.10am", flight_number: "2232", flight_duration: "1h 25m", flight_origin: "LHR", flight_destination: "BCN", xs_summary_icon: "greencheckmark.png", xs_summary_text: "Great flight", price: "189"},
+	{ departure_time: "9.30am", arrival_time: "11.45am", flight_number: "2432", flight_duration: "1h 15m", flight_origin: "LHR", flight_destination: "BCN", xs_summary_icon: "greencheckmark.png", xs_summary_text: "Average", price: "209"},
+	{ departure_time: "11am", arrival_time: "1pm", flight_number: "2532", flight_duration: "2h 05m", flight_origin: "LHR", flight_destination: "BCN", xs_summary_icon: "greencheckmark.png", xs_summary_text: "Poor flight", price: "489"}
+];
+
+var flight_offer_tpl = $.templates("#flight_offer_tpl");
+
+
+function scrollToResults(){
+	$('html, body').animate({ scrollTop: $("#booking_results").offset().top},"slow", "swing", function(){
+		location.href="#booking_results";
+	});
+
+}
+
+function renderResults() {
+	var rendered_html = flight_offer_tpl.render(flight_offers_rated);
+	$("#booking_results_table tbody").html(rendered_html);
+}
+
+function showResults(){
+	renderResults()
+	scrollToResults();
+}
+
+
+$(function(){
+
+	$("#booking_form_form").submit(function(){
+		console.log("Booking form submitted");
+		$('html, body').animate({ scrollTop: $("#booking_wait").offset().top},"slow", "swing", function(){
+			location.href="#booking_wait";
+		});
+		return false;
+	});
+
+});
+

@@ -2326,30 +2326,12 @@ input, select, textarea {
 		text-decoration: none;
 		width: 100%;
 	}
-	input[type="date"] {
+	input[type="date"], input[type="number"] {
 	        -moz-appearance: none;
     		-webkit-appearance: none;
     		-ms-appearance: none;
     		appearance: none;
-    		background: rgba(255, 255, 255, 0.05);
-    		border-radius: 0.25em;
-    		border: none;
-    		border: solid 1px rgba(255, 255, 255, 0.15);
-    		color: inherit;
-    		display: block;
-    		outline: 0;
-    		position: relative
-    		left: 300px
-    		padding-top: 12px;
-    	    text-decoration: none;
-
-	}
-
-input[type="number"] {
-	-moz-appearance: none;
-    		-webkit-appearance: none;
-    		-ms-appearance: none;
-    		appearance: none;
+			padding: 0 1em;
     		background: rgba(255, 255, 255, 0.05);
     		border-radius: 0.25em;
     		border: none;
@@ -2360,8 +2342,10 @@ input[type="number"] {
     		position: relative
     		left: 300px
     	    text-decoration: none;
-    		width: 100%;
+			width: 100%;
 	}
+
+
 		input[type="text"]:invalid,
 		input[type="password"]:invalid,
 		input[type="email"]:invalid,
@@ -2410,6 +2394,7 @@ input[type="number"] {
 	input[type="password"],
 	input[type="email"],
 	input[type="date"],
+	input[type="number"],	
 	select {
 		height: 2.75em;
 	}
@@ -2907,6 +2892,10 @@ input[type="number"] {
 		text-align: center;
 	}
 
+	section.hidden_section {
+		display: none;
+	}
+
 	header p {
 		color: rgba(255, 255, 255, 0.35);
 		position: relative;
@@ -3186,13 +3175,36 @@ input[type="number"] {
 	}
 
 		table tbody tr {
-			border: solid 1px rgba(255, 255, 255, 0.15);
+			color: black;
+			border: solid 1px rgba(0, 0, 0, 0.70);
+			background-color: rgba(255, 255, 255, 0.80);
 			border-left: 0;
 			border-right: 0;
 		}
 
 			table tbody tr:nth-child(2n + 1) {
-				background-color: rgba(255, 255, 255, 0.05);
+				background-color: rgba(255, 255, 255, 0.90);
+			}
+			table.pricelist tbody tr:hover {
+				background-color: rgba(255, 255, 255);
+			}
+
+			table tbody tr img.xsicon {
+				max-width: 40px;
+				vertical-align:middle;
+			}
+
+			table tbody tr span.subinfo {
+				font-size: 0.8em;
+				color: #555555;
+				padding: 0;
+				line-height: 1;
+			}
+
+			table tbody tr span.summary {
+				font-weight: bold;
+				padding: 0;
+				font-size: 1.2em;
 			}
 
 		table td {

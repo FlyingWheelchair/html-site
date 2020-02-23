@@ -1,0 +1,125 @@
+<!DOCTYPE HTML>
+<!--
+	Hyperspace by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Book a Flight</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="assets/css/animate.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+
+					<script id="flight_offer_tpl" type="text/x-jsrender">
+										<tr>
+											<td>{{:departure_time}}-{{:arrival_time}}<br/><span class="subinfo">Athena {{:flight_number}}<span></td>
+											<td>{{:flight_duration}}<br/><span class="subinfo">{{:flight_origin}}-{{:flight_destination}}</span></td>
+											<td style="width: 15%;"><img class="xsicon" src="images/{{:xs_summary_icon}}"/><span class="summary">{{:xs_summary_text}}</span></td>
+											<td>
+												<img class="xsicon" src="images/bathroom.png"/>Large bathroom in aircraft<br/>
+												<img class="xsicon" src="images/movable arm.png"/>Movable Armrest<br/>
+												<img class="xsicon" src="images/gate.png"/>Wheelchair can go to the gate<br/>
+												<img class="xsicon" src="images/baggageclaim.png"/>Wheelchair returned at luggage claim												
+											</td>
+											<td><span class="summary">${{:price}}</span></td>
+										</tr>
+  					</script>
+
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+				<!-- Main -->
+					<section id="booking_form" class="wrapper fullscreen  fade-up">
+						<div class="inner">
+							<h1 class="major">Find the right flight for your needs</h1>
+								<form id="booking_form_form">
+									<div class="row gtr-uniform">
+										<div class="col-3 col-12-xsmall">
+											<input type="text" name="booking_form_origin" id="booking_form_origin" value="" placeholder="Origin Airport Code (e.g., BCN)">
+										</div>
+										<div class="col-3 col-12-xsmall">
+											<input type="text" name="booking_form_destination" id="booking_form_destination" value="" placeholder="Destination Airport Code (e.g., LHR)">
+										</div>
+										<div class="col-3 col-12-xsmall">
+											<input type="date" name="booking_form_date" id="booking_form_date">
+										</div>
+										<div class="col-3 col-12-xsmall">
+											<input type="number" id="booking_form_pax" name="booking_form_pax"  placeholder="Number of passengers">
+										</div>
+										<div class="col-12">
+											<ul class="actions">
+												<li><input class="large primary" type="submit" value="Search" class="primary"></li>
+												<li><input class="large" type="reset" value="Reset"></li>
+											</ul>
+										</div>
+									</div>
+								</form>
+						</div>
+					</section>
+
+					<section id="booking_wait" class="wrapper fullscreen  fade-up">
+						<div class="inner">
+							<h1 class="major">We're connecting your profile with airlines ☕ <span class="animated infinite flash slow">...</span></h1>
+							<div class="row gtr-uniform">
+								<div class="col-5 col-12-xsmall"></div>
+								<div class="col-2 col-12-xsmall"><span class="animated infinite slideInLeftOutRight image fit "><img style="filter: invert(1);" src="images/logo.png" alt=""></span></div>
+								<div class="col-5 col-12-xsmall"></div>
+							</div>
+						</div>
+					</section>
+
+					<section id="booking_results" class="wrapper">
+						<div class="inner">
+							<h1 class="major">Book a Flight - Choose</h1>
+								<div class="table-wrapper">
+								<table id="booking_results_table" class="pricelist">
+									<thead>
+										<tr>
+											<th style="width: 15%;">Time</th>
+											<th style="width: 15%;">Duration</th>
+											<th colspan=2 style="width: 55%;">Wheelchair Accessibility</th>
+											<th style="width: 15%;">Price</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>9.25am-11.42am<br/>Delta DL213</td>
+											<td>2h 17m<br/>LHR-BCN</td>
+											<td style="width: 10%;"><span class="summary">Average</span></td>
+											<td><img class="xsicon" src="images/large.png"/>Large bathroom in aircraft</td>
+											<td>$189</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>							
+						</div>
+					</section>
+
+			</div>
+
+		<!-- Footer -->
+			<footer id="footer" class="wrapper alt">
+				<div class="inner">
+					<ul class="menu">
+						<li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+					</ul>
+				</div>
+			</footer>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+			<script src="assets/js/jsrender.js"></script>
+			<script src="assets/js/iata.js"></script>
+	</body>
+</html>
