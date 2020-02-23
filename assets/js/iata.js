@@ -1,6 +1,6 @@
 NODE_SERVER_URL="http://flyingwheelchair.com:3000/"
 // data has to be in the following format:
-// { "origin_code": "LHR", "destination_code": "BCN", "date": "2020-06-20",  "pax_adt": 1, "pax_chd": 1, "SpecialServiceCode": ""}
+// { "origin_code": "LHR", "destination_code": "BCN", "date": "2020-06-20",  "pax_adt": 1, "pax_chd": 1, "SpecialServiceCode": "WCHS"}
 function AirShoppingRQ(data) {
 	$.post(NODE_SERVER_URL + "/AirShoppingRQ", data, function(){
 
