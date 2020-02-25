@@ -19,10 +19,10 @@
 											<td>{{:flight_duration}}<br/><span class="subinfo">{{:flight_origin}}-{{:flight_destination}}</span></td>
 											<td style="width: 15%;"><img class="xsicon" src="images/{{:xs_summary_icon}}"/><span class="summary">{{:xs_summary_text}}</span></td>
 											<td>
-												<img class="xsicon" src="images/bathroom.png"/>Large bathroom in aircraft<br/>
-												<img class="xsicon" src="images/movable arm.png"/>Movable Armrest<br/>
-												<img class="xsicon" src="images/gate.png"/>Wheelchair can go to the gate<br/>
-												<img class="xsicon" src="images/baggageclaim.png"/>Wheelchair returned at luggage claim												
+												Bathroom is {{:bathroom}}<br/>
+												Armrest is {{:armrest}}<br/>
+												Aisle size {{:aisle}}<br/>
+												Cargo door {{:cargo_door}}
 											</td>
 											<td><span class="summary">${{:price}}</span></td>
 										</tr>
@@ -97,6 +97,57 @@
 									</tbody>
 								</table>
 							</div>							
+						</div>
+					</section>
+
+					<section id="payment_form" class="wrapper fullscreen  fade-up">
+						<div class="inner">
+							<h1 class="major">Review Selected Flight and Pay</h1>
+								<div class="table-wrapper">
+								<table id="selected_flight_table" class="pricelist">
+									<thead>
+										<tr>
+											<th style="width: 15%;">Time</th>
+											<th style="width: 15	%;">Duration</th>
+											<th colspan=2 style="width: 55%;">Wheelchair Accessibility</th>
+											<th style="width: 15%;">Price</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>9.25am-11.42am<br/>Delta DL213</td>
+											<td>2h 17m<br/>LHR-BCN</td>
+											<td style="width: 10%;"><span class="summary">Average</span></td>
+											<td><img class="xsicon" src="images/large.png"/>Large bathroom in aircraft</td>
+											<td>$189</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+								<form id="payment_form_form">
+									<div class="row gtr-uniform">
+										<div class="col-3 col-12-xsmall">
+											<input type="text" name="payment_form_card_number" id="payment_form_card_number" value="" placeholder="Credit Card Number">
+										</div>
+										<div class="col-2 col-12-xsmall">
+											<input type="text" name="payment_form_card_expiration" id="payment_form_card_expiration" value="" placeholder="Expires MM/YY">
+										</div>
+										<div class="col-2 col-12-xsmall">
+											<input type="text" name="payment_form_card_security" id="payment_form_card_security" placeholder="CCV">
+										</div>
+									</div>
+									<a class="button large primary" href="#all_done">PAY</a>
+								</form>
+						</div>
+					</section>
+
+					<section id="all_done" class="wrapper fullscreen fade-up">
+						<div class="inner">
+							<h1 class="major">You are all set! 👍</h1>
+							<h3>Your confirmation code is : <code>WRA5FR</code></h3>
+							<h3>We've confirmed with Athena Airline that you will travel with your <code>Electric Jazzy 614 HD</code> wheelchair.</h3>
+							<h3>You will receive an email summarizing step-by-step your flight experience.</h3>
+							<h3>Have a great trip</h3> 
 						</div>
 					</section>
 

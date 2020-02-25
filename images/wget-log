@@ -1,0 +1,11 @@
+--2020-02-23 22:36:06--  https://www.expedia.com/_dms/header/logo.svg?locale=en_US
+Resolving www.expedia.com (www.expedia.com)... 23.33.163.250
+Connecting to www.expedia.com (www.expedia.com)|23.33.163.250|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 6556 (6.4K) [image/svg+xml]
+Saving to: ‘logo.svg?locale=en_US’
+
+logo.svg?locale=en_US                             0%[                                                                                                        ]       0  --.-KB/s               logo.svg?locale=en_US                           100%[=======================================================================================================>]   6.40K  --.-KB/s    in 0s      
+
+2020-02-23 22:36:06 (997 MB/s) - ‘logo.svg?locale=en_US’ saved [6556/6556]
+
